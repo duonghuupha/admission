@@ -5458,12 +5458,12 @@ body.mob-safari .sidebar.sidebar-fixed {
 
 .footer {
     padding-top: 75px;
-    position: fixed;
+    /*position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: 1032;
-    background: #fff;
+    background: #fff;*/
 }
 
 .footer .footer-inner {

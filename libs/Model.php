@@ -35,33 +35,17 @@ class Model {
         }
         return $query;
     }
-/////////////////////////////////////////////////////////////////////////////////////////////////
-    /**
-     * Check token
-     */
-    function check_token($token){
-        $query = $this->db->query("SELECT COUNT(*) AS Total FROM tbl_users WHERE token = '$token' AND status = 1");
-        $row = $query->fetchAll();
-        return $row[0]['Total'];
-    }
-    
-    /**
-     * return fullname by user_id
-     */
-    function return_fullname_personnel_userid($personel_id){
-        $query = $this->db->query("SELECT fullname FROM tbl_personnel WHERE id = $personel_id");
-        $row = $query->fetchAll();
-        return $row[0]['fullname'];
+
+    // thong tin tuyen sinh
+    function get_setting_admission(){
+        $query = $this->db->query("SELECT * FROM tbl_setting_admission WHERE status = 1");
+        return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    /**
-     * return last food_main
-     */
-    function get_last_food_main_of_date($class_id, $date){
-        $query = $this->db->query("SELECT food_main FROM tbl_time_food WHERE class_id = $class_id AND DATE_FORMAT(create_at, '%Y-%m-%d') = '$date'
-                                    ORDER BY id DESC LIMIT 0, 1");
-        $row = $query->fetchAll();
-        return $row[0]['food_main'];
+    // thong tin don vi chu quan
+    function get_setting(){
+        $query = $this->db->query("SELECT * FROM tbl_setting WHERE id = 1");
+        return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 
