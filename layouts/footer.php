@@ -37,11 +37,6 @@
 		<script src="<?php echo URL ?>/styles/assets/js/jquery-ui.custom.min.js"></script>
 		<script src="<?php echo URL ?>/styles/assets/js/jquery-ui.min.js"></script>
 		<script src="<?php echo URL ?>/styles/assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/jquery.easypiechart.min.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/jquery.sparkline.index.min.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/jquery.flot.min.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/jquery.flot.pie.min.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/jquery.flot.resize.min.js"></script>
 		<script src="<?php echo URL ?>/styles/assets/js/moment.min.js"></script>
 		<script src="<?php echo URL ?>/styles/assets/js/bootstrap-datepicker.min.js"></script>
 		<script src="<?php echo URL ?>/styles/assets/js/jquery.toast.js"></script>
@@ -49,14 +44,6 @@
 		<script src="<?php echo URL ?>/styles/assets/js/select2.min.js"></script>
 		<script src="<?php echo URL ?>/styles/assets/js/chosen.jquery.min.js"></script>
 		<script src="<?php echo URL ?>/styles/assets/js/jquery.maskedinput.min.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/tree.min.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/jquery.jqGrid.min.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/grid.locale-en.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/context-menu.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/bootstrap-editable.min.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/md5.min.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/bootstrap-timepicker.min.js"></script>
-		<script src="<?php echo URL ?>/styles/assets/js/ace-editable.min.js"></script>
 		<script src="<?php echo URL ?>/styles/assets/js/ace-elements.min.js"></script>
 		<script src="<?php echo URL ?>/styles/assets/js/ace.min.js"></script>
 	</body>

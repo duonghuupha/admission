@@ -1,3 +1,4 @@
+<?php $setting = $this->_Data->get_setting(); $admission = $this->_Data->get_setting_admission(); ?>
 <div class="main-content">
     <div class="main-content-inner">
         <div class="page-content">
@@ -23,7 +24,7 @@
                                 </label>
                                 <div>
                                     <input type="text" id="identifi" name="identifi" style="width:100%" maxlength="12" class="form-control"
-                                    placeholder="Số định danh cá nhân của học sinh" required="" onkeypress="validate(event)"/>
+                                    placeholder="Số định danh cá nhân của học sinh" required="" onkeypress="validate(event)" onchange="check_identifi(this.value)"/>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +52,7 @@
                                 </label>
                                 <div>
                                     <input type="text" id="birthday" name="birthday" style="width:100%" class="form-control input-mask-date"
-                                    placeholder="Ngày sinh" required="" onkeypress="validate(event)"/>
+                                    placeholder="Ngày sinh" required="" onkeypress="validate(event)" onchange="check_format_birthday_student(this.value)"/>
                                 </div>
                             </div>
                         </div>
@@ -434,6 +435,19 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="space-6"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                            <button type="button" class="btn btn-sm btn-danger" onclick="javascript:location.reload()">
+                                <i class="ace-icon fa fa-times"></i>
+                                Hủy bỏ
+                            </button>
+                            <button type="button" class="btn btn-sm btn-primary" onclick="save()">
+                                <i class="ace-icon fa fa-save"></i>
+                                Ghi dữ liệu
+                            </button>
+                        </div>
                     </form>
                 </div><!-- /.col -->
                 <div class="col-xs-12 col-sm-12 col-md-2"></div>
@@ -441,5 +455,29 @@
         </div><!-- /.page-content -->
     </div>
 </div><!-- /.main-content -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center">Thông báo</h5>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Đăng ký tuyển sinh thành công. 
+                    <b>Từ ngày <?php echo date("d/m/Y", strtotime($admission[0]['date_start'])) ?> đến ngày <?php echo date("d/m/Y", strtotime($admission[0]['date_end'])) ?></b>, 
+                    phụ huynh mang hồ sơ đến <?php echo $setting[0]['title'] ?> để nhập học.
+                </p>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button type="button" class="btn btn-success" onclick="window.location.href='https:\\mncukhoi.longbien.edu.vn'">
+                    <i class="ace-icon fa fa-times"></i>
+                    Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="<?php echo URL.'/public/' ?>scripts/index.js"></script>
